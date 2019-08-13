@@ -1,0 +1,65 @@
+version: "2.2"
+services:
+  message_store:
+    image: ethangarofolo/eventide-message-store-postgres
+    hostname: message_store
+    environment:
+      http_proxy: http://utmidwsgw.gmaccm.com:8080
+    expose:
+      - 5432
+    ports:
+      - 5432:5432
+
+  message_store_data_api:
+    image: mrperson/message_store_ingress
+    hostname: message_store_data_api
+    environment:
+      http_proxy: http://utmidwsgw.gmaccm.com:8080
+      MESSAGE_STORE_USER: 'message_store'
+      MESSAGE_STORE_HOST: 'message_store'
+      MESSAGE_STORE_DATABASE: 'message_store'
+      MESSAGE_STORE_PASSWORD: ''
+      MESSAGE_STORE_PORT: 5432
+    links:
+      - message_store
+    expose:
+      - 3000
+    ports:
+      - 3000:3000
+
+  zeppelin:
+    image: dylanmei/zeppelin:latest
+    hostname: zeppelin
+    environment:
+      http_proxy: http://utmidwsgw.gmaccm.com:8080
+      ZEPPELIN_PORT: 8080
+      ZEPPELIN_JAVA_OPTS: >-
+        -Dspark.driver.memory=1g
+        -Dspark.executor.memory=2g
+      MASTER: local[*]
+      SPARK_SUBMIT_OPTIONS: >-
+        --packages org.postgresql:postgresql:42.2.5
+    links:
+      - message_store
+      - message_store_data_api
+    ports:
+      - 9002:8080
+    volumes:
+      - ./zeppelin/data:/usr/zeppelin/data
+      - ./zeppelin/notebooks:/usr/zeppelin/notebook
+      - ./zeppelin/files:/usr/zeppelin/files
+      - ./zeppelin/conf:/usr/zeppelin/conf
+
+  message_store_data_gen:
+    image: mrperson/message_store_data_gen
+    hostname: message_store_data_gen
+    environment:
+      http_proxy: http://utmidwsgw.gmaccm.com:8080
+    links:
+      - message_store
+      - message_store_data_api
+    entrypoint:
+      - java 
+      - -jar 
+      - json-data-generator-1.4.0.jar 
+      - exampleMessageStore_simConfig.json
