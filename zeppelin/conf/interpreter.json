@@ -1,0 +1,437 @@
+{
+  "interpreterSettings": {
+    "2E5U2DEQV": {
+      "id": "2E5U2DEQV",
+      "name": "angular",
+      "group": "angular",
+      "properties": {},
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "angular",
+          "class": "org.apache.zeppelin.angular.AngularInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "editOnDblClick": true
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E4UTRZZ6": {
+      "id": "2E4UTRZZ6",
+      "name": "python",
+      "group": "python",
+      "properties": {
+        "zeppelin.python": "python",
+        "zeppelin.python.maxResult": "1000"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "python",
+          "class": "org.apache.zeppelin.python.PythonInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "python",
+            "editOnDblClick": false
+          }
+        },
+        {
+          "name": "sql",
+          "class": "org.apache.zeppelin.python.PythonInterpreterPandasSql",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sql",
+            "editOnDblClick": false
+          }
+        },
+        {
+          "name": "conda",
+          "class": "org.apache.zeppelin.python.PythonCondaInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sh",
+            "editOnDblClick": false
+          }
+        },
+        {
+          "name": "docker",
+          "class": "org.apache.zeppelin.python.PythonDockerInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sh",
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E5W7Z564": {
+      "id": "2E5W7Z564",
+      "name": "psql",
+      "group": "psql",
+      "properties": {
+        "zeppelin.interpreter.output.limit": "102400",
+        "postgresql.password": "",
+        "postgresql.driver.name": "org.postgresql.Driver",
+        "postgresql.max.result": "1000",
+        "postgresql.url": "jdbc:postgresql://message_store:5432/",
+        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E5W7Z564",
+        "postgresql.user": "message_store"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "sql",
+          "class": "org.apache.zeppelin.postgresql.PostgreSqlInterpreter",
+          "defaultInterpreter": false,
+          "editor": {}
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E8PZANDS": {
+      "id": "2E8PZANDS",
+      "name": "elasticsearch",
+      "group": "elasticsearch",
+      "properties": {
+        "elasticsearch.basicauth.password": "",
+        "elasticsearch.result.size": "10",
+        "elasticsearch.port": "9300",
+        "elasticsearch.cluster.name": "elasticsearch",
+        "elasticsearch.host": "localhost",
+        "elasticsearch.basicauth.username": "",
+        "elasticsearch.client.type": "transport"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "elasticsearch",
+          "class": "org.apache.zeppelin.elasticsearch.ElasticsearchInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E71YM6K2": {
+      "id": "2E71YM6K2",
+      "name": "md",
+      "group": "md",
+      "properties": {
+        "markdown.parser.type": "pegdown"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "md",
+          "class": "org.apache.zeppelin.markdown.Markdown",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "markdown",
+            "editOnDblClick": true
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E5WBV5HF": {
+      "id": "2E5WBV5HF",
+      "name": "spark",
+      "group": "spark",
+      "properties": {
+        "spark.cores.max": "",
+        "zeppelin.spark.printREPLOutput": "true",
+        "master": "local[*]",
+        "zeppelin.spark.maxResult": "1000",
+        "zeppelin.dep.localrepo": "local-repo",
+        "spark.app.name": "Zeppelin",
+        "spark.executor.memory": "2g",
+        "zeppelin.spark.sql.stacktrace": "false",
+        "zeppelin.spark.importImplicit": "true",
+        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E5WBV5HF",
+        "zeppelin.spark.useHiveContext": "true",
+        "args": "",
+        "zeppelin.spark.concurrentSQL": "false",
+        "zeppelin.pyspark.python": "python",
+        "zeppelin.dep.additionalRemoteRepository": "spark-packages,http://dl.bintray.com/spark-packages/maven,false;",
+        "zeppelin.interpreter.output.limit": "102400"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "spark",
+          "class": "org.apache.zeppelin.spark.SparkInterpreter",
+          "defaultInterpreter": true,
+          "editor": {
+            "language": "scala",
+            "editOnDblClick": false
+          }
+        },
+        {
+          "name": "sql",
+          "class": "org.apache.zeppelin.spark.SparkSqlInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sql",
+            "editOnDblClick": false
+          }
+        },
+        {
+          "name": "dep",
+          "class": "org.apache.zeppelin.spark.DepInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "scala",
+            "editOnDblClick": false
+          }
+        },
+        {
+          "name": "pyspark",
+          "class": "org.apache.zeppelin.spark.PySparkInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "python",
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [
+        {
+          "groupArtifactVersion": "/usr/zeppelin/files/postgresql-42.2.5.jar",
+          "local": false
+        }
+      ],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E55UWJX7": {
+      "id": "2E55UWJX7",
+      "name": "hbase",
+      "group": "hbase",
+      "properties": {
+        "zeppelin.hbase.test.mode": "false",
+        "hbase.ruby.sources": "lib/ruby",
+        "hbase.home": "/usr/lib/hbase/"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "hbase",
+          "class": "org.apache.zeppelin.hbase.HbaseInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E5QY1XYB": {
+      "id": "2E5QY1XYB",
+      "name": "jdbc",
+      "group": "jdbc",
+      "properties": {
+        "default.password": "",
+        "zeppelin.jdbc.auth.type": "",
+        "common.max_count": "1000",
+        "zeppelin.jdbc.principal": "",
+        "default.user": "message_store",
+        "default.url": "jdbc:postgresql://message_store:5432/",
+        "default.driver": "org.postgresql.Driver",
+        "zeppelin.jdbc.keytab.location": "",
+        "zeppelin.jdbc.concurrent.use": "true",
+        "zeppelin.jdbc.concurrent.max_connection": "10"
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "sql",
+          "class": "org.apache.zeppelin.jdbc.JDBCInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sql",
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    },
+    "2E6XTRNMJ": {
+      "id": "2E6XTRNMJ",
+      "name": "sh",
+      "group": "sh",
+      "properties": {
+        "shell.working.directory.user.home": "false",
+        "zeppelin.shell.keytab.location": "",
+        "shell.command.timeout.millisecs": "60000",
+        "zeppelin.shell.principal": "",
+        "zeppelin.shell.auth.type": ""
+      },
+      "status": "READY",
+      "interpreterGroup": [
+        {
+          "name": "sh",
+          "class": "org.apache.zeppelin.shell.ShellInterpreter",
+          "defaultInterpreter": false,
+          "editor": {
+            "language": "sh",
+            "editOnDblClick": false
+          }
+        }
+      ],
+      "dependencies": [],
+      "option": {
+        "remote": true,
+        "port": -1,
+        "perNote": "shared",
+        "perUser": "shared",
+        "isExistingProcess": false,
+        "setPermission": false,
+        "users": [],
+        "isUserImpersonate": false
+      }
+    }
+  },
+  "interpreterBindings": {
+    "2EK1CQHSC": [
+      "2E5WBV5HF",
+      "2E71YM6K2",
+      "2E5U2DEQV",
+      "2E6XTRNMJ",
+      "2E5W7Z564",
+      "2E4UTRZZ6",
+      "2E8PZANDS",
+      "2E5QY1XYB",
+      "2E55UWJX7"
+    ],
+    "2E7GJ95VB": [
+      "2E5WBV5HF",
+      "2E71YM6K2",
+      "2E5U2DEQV",
+      "2E6XTRNMJ",
+      "2E5W7Z564",
+      "2E4UTRZZ6",
+      "2E8PZANDS",
+      "2E5QY1XYB",
+      "2E55UWJX7"
+    ]
+  },
+  "interpreterRepositories": [
+    {
+      "id": "central",
+      "type": "default",
+      "url": "http://repo1.maven.org/maven2/",
+      "releasePolicy": {
+        "enabled": true,
+        "updatePolicy": "daily",
+        "checksumPolicy": "warn"
+      },
+      "snapshotPolicy": {
+        "enabled": true,
+        "updatePolicy": "daily",
+        "checksumPolicy": "warn"
+      },
+      "mirroredRepositories": [],
+      "repositoryManager": false
+    },
+    {
+      "id": "local",
+      "type": "default",
+      "url": "file:///root/.m2/repository",
+      "releasePolicy": {
+        "enabled": true,
+        "updatePolicy": "daily",
+        "checksumPolicy": "warn"
+      },
+      "snapshotPolicy": {
+        "enabled": true,
+        "updatePolicy": "daily",
+        "checksumPolicy": "warn"
+      },
+      "mirroredRepositories": [],
+      "repositoryManager": false
+    }
+  ]
+}
