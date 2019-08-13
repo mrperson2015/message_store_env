@@ -93,12 +93,12 @@
       "group": "psql",
       "properties": {
         "zeppelin.interpreter.output.limit": "102400",
-        "postgresql.password": "",
         "postgresql.driver.name": "org.postgresql.Driver",
-        "postgresql.max.result": "1000",
+        "postgresql.password": "",
         "postgresql.url": "jdbc:postgresql://message_store:5432/",
-        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E5W7Z564",
-        "postgresql.user": "message_store"
+        "postgresql.max.result": "1000",
+        "postgresql.user": "message_store",
+        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E5W7Z564"
       },
       "status": "READY",
       "interpreterGroup": [
@@ -126,9 +126,9 @@
       "name": "elasticsearch",
       "group": "elasticsearch",
       "properties": {
-        "elasticsearch.basicauth.password": "",
-        "elasticsearch.result.size": "10",
         "elasticsearch.port": "9300",
+        "elasticsearch.result.size": "10",
+        "elasticsearch.basicauth.password": "",
         "elasticsearch.cluster.name": "elasticsearch",
         "elasticsearch.host": "localhost",
         "elasticsearch.basicauth.username": "",
@@ -162,6 +162,8 @@
       "name": "md",
       "group": "md",
       "properties": {
+        "zeppelin.interpreter.output.limit": "102400",
+        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E71YM6K2",
         "markdown.parser.type": "pegdown"
       },
       "status": "READY",
@@ -200,12 +202,12 @@
         "zeppelin.dep.localrepo": "local-repo",
         "spark.app.name": "Zeppelin",
         "spark.executor.memory": "2g",
-        "zeppelin.spark.sql.stacktrace": "false",
         "zeppelin.spark.importImplicit": "true",
-        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E5WBV5HF",
+        "zeppelin.spark.sql.stacktrace": "false",
         "zeppelin.spark.useHiveContext": "true",
-        "args": "",
+        "zeppelin.interpreter.localRepo": "/usr/zeppelin/local-repo/2E5WBV5HF",
         "zeppelin.spark.concurrentSQL": "false",
+        "args": "",
         "zeppelin.pyspark.python": "python",
         "zeppelin.dep.additionalRemoteRepository": "spark-packages,http://dl.bintray.com/spark-packages/maven,false;",
         "zeppelin.interpreter.output.limit": "102400"
@@ -375,17 +377,6 @@
     }
   },
   "interpreterBindings": {
-    "2EK1CQHSC": [
-      "2E5WBV5HF",
-      "2E71YM6K2",
-      "2E5U2DEQV",
-      "2E6XTRNMJ",
-      "2E5W7Z564",
-      "2E4UTRZZ6",
-      "2E8PZANDS",
-      "2E5QY1XYB",
-      "2E55UWJX7"
-    ],
     "2E7GJ95VB": [
       "2E5WBV5HF",
       "2E71YM6K2",
