@@ -1,0 +1,94 @@
+{
+  "paragraphs": [
+    {
+      "text": "// linesDF \u003d sc.textFile(\"file.txt\").toDF(\"line\")\r\n// val wordsDF \u003d linesDF.explode(\"line\",\"word\")((line: String) \u003d\u003e line.split(\" \"))\r\n// val wordCountDF \u003d wordsDF.groupBy(\"word\").count()\r\n// wordCountDF.show()\r\n\r\n",
+      "user": "anonymous",
+      "dateUpdated": "Aug 13, 2019 11:43:13 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1565739004783_903302923",
+      "id": "20190813-233004_1468027204",
+      "dateCreated": "Aug 13, 2019 11:30:04 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.pyspark\r\n\r\nfrom pyspark.sql import functions as F\r\nfrom pyspark.sql.types import *\r\n\r\njdbcDF \u003d spark.read \\\r\n  .format(\"jdbc\") \\\r\n  .option(\"url\", \"jdbc:postgresql://message_store/message_store\") \\\r\n  .option(\"dbtable\", \"public.messages\") \\\r\n  .option(\"user\", \"message_store\") \\\r\n  .option(\"password\", \"\") \\\r\n  .load() \\\r\n  .select(\"data\") \\\r\n  .limit(100)\r\n\r\nlinesDF \u003d jdbcDF.select(F.size(F.split(jdbcDF.data, \u0027:\u0027)))\r\n\r\nz.show(linesDF)",
+      "user": "anonymous",
+      "dateUpdated": "Aug 14, 2019 1:57:38 PM",
+      "config": {
+        "colWidth": 12.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false
+        },
+        "editorMode": "ace/mode/python"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TABLE",
+            "data": "size(split(data, :))\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n11\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1565739748525_1946028805",
+      "id": "20190813-234228_1879850885",
+      "dateCreated": "Aug 13, 2019 11:42:28 PM",
+      "dateStarted": "Aug 14, 2019 1:57:38 PM",
+      "dateFinished": "Aug 14, 2019 1:57:39 PM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1565739773970_-2057652925",
+      "id": "20190813-234253_955950057",
+      "dateCreated": "Aug 13, 2019 11:42:53 PM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "/PolarisCon_2019/Exercise_01",
+  "id": "2EMHG3DYU",
+  "angularObjects": {
+    "2E5WBV5HF:shared_process": [],
+    "2E71YM6K2:shared_process": [],
+    "2E55UWJX7:shared_process": [],
+    "2E5W7Z564:shared_process": [],
+    "2E6XTRNMJ:shared_process": [],
+    "2E4UTRZZ6:shared_process": [],
+    "2E5QY1XYB:shared_process": [],
+    "2E5U2DEQV:shared_process": [],
+    "2E8PZANDS:shared_process": []
+  },
+  "config": {},
+  "info": {}
+}

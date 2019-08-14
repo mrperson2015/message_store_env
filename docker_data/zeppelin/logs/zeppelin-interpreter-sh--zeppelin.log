@@ -1,0 +1,90 @@
+ INFO [2019-08-14 21:04:05,046] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/interpreter/sh/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:04:05,143] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.22.0.5:33547
+ INFO [2019-08-14 21:04:05,158] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 33547
+ INFO [2019-08-14 21:04:05,160] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 33547
+ INFO [2019-08-14 21:04:05,175] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.22.0.5, callbackPort: 39115, callbackInfo: CallbackInfo(host:172.22.0.5, port:33547)
+ INFO [2019-08-14 21:04:05,376] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.shell.ShellInterpreter
+ WARN [2019-08-14 21:04:05,504] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:04:05,543] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:04:05,543] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:04:05,544] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:04:05,550] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:04:05,551] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:04:05,564] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20170122-121357_640055590 started by scheduler org.apache.zeppelin.shell.ShellInterpreter1279922860
+ INFO [2019-08-14 21:04:05,579] ({pool-2-thread-2} ShellInterpreter.java[open]:66) - Command timeout property: 60000
+ERROR [2019-08-14 21:04:06,660] ({pool-2-thread-2} ShellInterpreter.java[interpret]:120) - Can not run wget https://s3.amazonaws.com/apache-zeppelin/tutorial/bank/bank.csv
+hadoop fs -put bank.csv .
+org.apache.commons.exec.ExecuteException: Process exited with an error: 127 (Exit value: 127)
+	at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:166)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:153)
+	at org.apache.zeppelin.shell.ShellInterpreter.interpret(ShellInterpreter.java:114)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:103)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:632)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.ParallelScheduler$JobRunner.run(ParallelScheduler.java:162)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ INFO [2019-08-14 21:04:06,670] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20170122-121357_640055590 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter1279922860
+ INFO [2019-08-14 21:26:28,113] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/interpreter/sh/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:26:28,183] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.23.0.5:40555
+ INFO [2019-08-14 21:26:28,191] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 40555
+ INFO [2019-08-14 21:26:28,192] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 40555
+ INFO [2019-08-14 21:26:29,234] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.23.0.5, callbackPort: 33871, callbackInfo: CallbackInfo(host:172.23.0.5, port:40555)
+ INFO [2019-08-14 21:26:29,380] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.shell.ShellInterpreter
+ WARN [2019-08-14 21:26:29,455] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:26:29,494] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:26:29,494] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:26:29,494] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:26:29,497] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:26:29,497] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:26:29,503] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:29,522] ({pool-2-thread-2} ShellInterpreter.java[open]:66) - Command timeout property: 60000
+ERROR [2019-08-14 21:26:29,615] ({pool-2-thread-2} ShellInterpreter.java[interpret]:120) - Can not run ll
+org.apache.commons.exec.ExecuteException: Process exited with an error: 127 (Exit value: 127)
+	at org.apache.commons.exec.DefaultExecutor.executeInternal(DefaultExecutor.java:404)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:166)
+	at org.apache.commons.exec.DefaultExecutor.execute(DefaultExecutor.java:153)
+	at org.apache.zeppelin.shell.ShellInterpreter.interpret(ShellInterpreter.java:114)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.interpret(LazyOpenInterpreter.java:103)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:632)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.ParallelScheduler$JobRunner.run(ParallelScheduler.java:162)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ INFO [2019-08-14 21:26:29,620] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:33,215] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:33,272] ({pool-2-thread-2} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:26:33,273] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:40,601] ({pool-2-thread-3} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:40,621] ({pool-2-thread-3} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:26:40,621] ({pool-2-thread-3} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:46,610] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:26:46,636] ({pool-2-thread-2} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:26:46,636] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:27:10,431] ({pool-2-thread-4} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:27:10,446] ({pool-2-thread-4} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:27:10,446] ({pool-2-thread-4} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:27:21,835] ({pool-2-thread-7} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:27:21,878] ({pool-2-thread-7} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:27:21,878] ({pool-2-thread-7} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:27:25,641] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:27:25,659] ({pool-2-thread-5} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:27:25,660] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:28:20,657] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:28:20,733] ({pool-2-thread-2} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:28:20,733] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:28:34,480] ({pool-2-thread-10} SchedulerFactory.java[jobStarted]:114) - Job 20190814-212620_392548206 started by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:28:34,505] ({pool-2-thread-10} ShellInterpreter.java[interpret]:115) - Paragraph 20190814-212620_392548206 return with exit value: 0
+ INFO [2019-08-14 21:28:34,505] ({pool-2-thread-10} SchedulerFactory.java[jobFinished]:120) - Job 20190814-212620_392548206 finished by scheduler org.apache.zeppelin.shell.ShellInterpreter207998436
+ INFO [2019-08-14 21:31:46,814] ({pool-1-thread-1} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...

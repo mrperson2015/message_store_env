@@ -1,0 +1,181 @@
+ INFO [2019-08-14 21:04:12,797] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:04:12,965] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.22.0.5:33259
+ INFO [2019-08-14 21:04:12,978] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 33259
+ INFO [2019-08-14 21:04:12,981] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 33259
+ INFO [2019-08-14 21:04:14,004] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.22.0.5, callbackPort: 34257, callbackInfo: CallbackInfo(host:172.22.0.5, port:33259)
+ INFO [2019-08-14 21:04:14,320] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.pig.PigInterpreter
+ INFO [2019-08-14 21:04:14,324] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.pig.PigQueryInterpreter
+ WARN [2019-08-14 21:04:14,529] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:04:14,573] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:04:14,573] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:04:14,574] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:04:14,575] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:04:14,576] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:04:14,586] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20161228-140640_1560978333 started by scheduler org.apache.zeppelin.pig.PigInterpreter1464243771
+ INFO [2019-08-14 21:04:14,636] ({pool-2-thread-2} ExecTypeProvider.java[selectExecType]:41) - Trying ExecType : LOCAL
+ INFO [2019-08-14 21:04:14,638] ({pool-2-thread-2} ExecTypeProvider.java[selectExecType]:41) - Trying ExecType : MAPREDUCE
+ INFO [2019-08-14 21:04:14,640] ({pool-2-thread-2} ExecTypeProvider.java[selectExecType]:43) - Picked MAPREDUCE as the ExecType
+ERROR [2019-08-14 21:04:14,737] ({pool-2-thread-2} PigInterpreter.java[open]:69) - Fail to initialize PigServer
+org.apache.pig.backend.executionengine.ExecException: ERROR 4010: Cannot find hadoop configurations in classpath (neither hadoop-site.xml nor core-site.xml was found in the classpath). If you plan to use local mode, please put -x local option in command line
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.getExecConf(HExecutionEngine.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:194)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:111)
+	at org.apache.pig.impl.PigContext.connect(PigContext.java:310)
+	at org.apache.pig.PigServer.<init>(PigServer.java:232)
+	at org.apache.pig.PigServer.<init>(PigServer.java:220)
+	at org.apache.pig.PigServer.<init>(PigServer.java:193)
+	at org.apache.pig.PigServer.<init>(PigServer.java:185)
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:61)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR [2019-08-14 21:04:14,744] ({pool-2-thread-2} Job.java[run]:190) - Job failed
+java.lang.RuntimeException: Fail to initialize PigServer
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:70)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.pig.backend.executionengine.ExecException: ERROR 4010: Cannot find hadoop configurations in classpath (neither hadoop-site.xml nor core-site.xml was found in the classpath). If you plan to use local mode, please put -x local option in command line
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.getExecConf(HExecutionEngine.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:194)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:111)
+	at org.apache.pig.impl.PigContext.connect(PigContext.java:310)
+	at org.apache.pig.PigServer.<init>(PigServer.java:232)
+	at org.apache.pig.PigServer.<init>(PigServer.java:220)
+	at org.apache.pig.PigServer.<init>(PigServer.java:193)
+	at org.apache.pig.PigServer.<init>(PigServer.java:185)
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:61)
+	... 11 more
+ INFO [2019-08-14 21:04:14,770] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20161228-140640_1560978333 finished by scheduler org.apache.zeppelin.pig.PigInterpreter1464243771
+ INFO [2019-08-14 21:04:24,753] ({pool-2-thread-3} SchedulerFactory.java[jobStarted]:114) - Job 20161228-140730_1903342877 started by scheduler org.apache.zeppelin.pig.PigInterpreter1286187560
+ INFO [2019-08-14 21:04:24,800] ({pool-2-thread-3} ExecTypeProvider.java[selectExecType]:41) - Trying ExecType : LOCAL
+ INFO [2019-08-14 21:04:24,801] ({pool-2-thread-3} ExecTypeProvider.java[selectExecType]:41) - Trying ExecType : MAPREDUCE
+ INFO [2019-08-14 21:04:24,801] ({pool-2-thread-3} ExecTypeProvider.java[selectExecType]:43) - Picked MAPREDUCE as the ExecType
+ERROR [2019-08-14 21:04:24,803] ({pool-2-thread-3} PigInterpreter.java[open]:69) - Fail to initialize PigServer
+org.apache.pig.backend.executionengine.ExecException: ERROR 4010: Cannot find hadoop configurations in classpath (neither hadoop-site.xml nor core-site.xml was found in the classpath). If you plan to use local mode, please put -x local option in command line
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.getExecConf(HExecutionEngine.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:194)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:111)
+	at org.apache.pig.impl.PigContext.connect(PigContext.java:310)
+	at org.apache.pig.PigServer.<init>(PigServer.java:232)
+	at org.apache.pig.PigServer.<init>(PigServer.java:220)
+	at org.apache.pig.PigServer.<init>(PigServer.java:193)
+	at org.apache.pig.PigServer.<init>(PigServer.java:185)
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:61)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.getPigInterpreter(PigQueryInterpreter.java:176)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.open(PigQueryInterpreter.java:59)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR [2019-08-14 21:04:24,808] ({pool-2-thread-3} Job.java[run]:190) - Job failed
+java.lang.RuntimeException: Fail to initialize PigServer
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:70)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.getPigInterpreter(PigQueryInterpreter.java:176)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.open(PigQueryInterpreter.java:59)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.pig.backend.executionengine.ExecException: ERROR 4010: Cannot find hadoop configurations in classpath (neither hadoop-site.xml nor core-site.xml was found in the classpath). If you plan to use local mode, please put -x local option in command line
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.getExecConf(HExecutionEngine.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:194)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:111)
+	at org.apache.pig.impl.PigContext.connect(PigContext.java:310)
+	at org.apache.pig.PigServer.<init>(PigServer.java:232)
+	at org.apache.pig.PigServer.<init>(PigServer.java:220)
+	at org.apache.pig.PigServer.<init>(PigServer.java:193)
+	at org.apache.pig.PigServer.<init>(PigServer.java:185)
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:61)
+	... 14 more
+ INFO [2019-08-14 21:04:24,821] ({pool-2-thread-3} SchedulerFactory.java[jobFinished]:120) - Job 20161228-140730_1903342877 finished by scheduler org.apache.zeppelin.pig.PigInterpreter1286187560
+ INFO [2019-08-14 21:04:27,166] ({pool-2-thread-4} SchedulerFactory.java[jobStarted]:114) - Job 20161228-154918_1551591203 started by scheduler org.apache.zeppelin.pig.PigInterpreter1286187560
+ INFO [2019-08-14 21:04:27,176] ({pool-2-thread-4} ExecTypeProvider.java[selectExecType]:41) - Trying ExecType : LOCAL
+ INFO [2019-08-14 21:04:27,176] ({pool-2-thread-4} ExecTypeProvider.java[selectExecType]:41) - Trying ExecType : MAPREDUCE
+ INFO [2019-08-14 21:04:27,176] ({pool-2-thread-4} ExecTypeProvider.java[selectExecType]:43) - Picked MAPREDUCE as the ExecType
+ERROR [2019-08-14 21:04:27,177] ({pool-2-thread-4} PigInterpreter.java[open]:69) - Fail to initialize PigServer
+org.apache.pig.backend.executionengine.ExecException: ERROR 4010: Cannot find hadoop configurations in classpath (neither hadoop-site.xml nor core-site.xml was found in the classpath). If you plan to use local mode, please put -x local option in command line
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.getExecConf(HExecutionEngine.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:194)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:111)
+	at org.apache.pig.impl.PigContext.connect(PigContext.java:310)
+	at org.apache.pig.PigServer.<init>(PigServer.java:232)
+	at org.apache.pig.PigServer.<init>(PigServer.java:220)
+	at org.apache.pig.PigServer.<init>(PigServer.java:193)
+	at org.apache.pig.PigServer.<init>(PigServer.java:185)
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:61)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.getPigInterpreter(PigQueryInterpreter.java:176)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.open(PigQueryInterpreter.java:59)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+ERROR [2019-08-14 21:04:27,178] ({pool-2-thread-4} Job.java[run]:190) - Job failed
+java.lang.RuntimeException: Fail to initialize PigServer
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:70)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.getPigInterpreter(PigQueryInterpreter.java:176)
+	at org.apache.zeppelin.pig.PigQueryInterpreter.open(PigQueryInterpreter.java:59)
+	at org.apache.zeppelin.interpreter.LazyOpenInterpreter.open(LazyOpenInterpreter.java:69)
+	at org.apache.zeppelin.interpreter.remote.RemoteInterpreterServer$InterpretJob.jobRun(RemoteInterpreterServer.java:616)
+	at org.apache.zeppelin.scheduler.Job.run(Job.java:188)
+	at org.apache.zeppelin.scheduler.FIFOScheduler$1.run(FIFOScheduler.java:140)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.pig.backend.executionengine.ExecException: ERROR 4010: Cannot find hadoop configurations in classpath (neither hadoop-site.xml nor core-site.xml was found in the classpath). If you plan to use local mode, please put -x local option in command line
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.getExecConf(HExecutionEngine.java:157)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:194)
+	at org.apache.pig.backend.hadoop.executionengine.HExecutionEngine.init(HExecutionEngine.java:111)
+	at org.apache.pig.impl.PigContext.connect(PigContext.java:310)
+	at org.apache.pig.PigServer.<init>(PigServer.java:232)
+	at org.apache.pig.PigServer.<init>(PigServer.java:220)
+	at org.apache.pig.PigServer.<init>(PigServer.java:193)
+	at org.apache.pig.PigServer.<init>(PigServer.java:185)
+	at org.apache.zeppelin.pig.PigInterpreter.open(PigInterpreter.java:61)
+	... 14 more
+ INFO [2019-08-14 21:04:27,185] ({pool-2-thread-4} SchedulerFactory.java[jobFinished]:120) - Job 20161228-154918_1551591203 finished by scheduler org.apache.zeppelin.pig.PigInterpreter1286187560

@@ -28,27 +28,25 @@ services:
       - 3000:3000
 
   zeppelin:
-    image: dylanmei/zeppelin:latest
+    image: apache/zeppelin:0.8.1
     hostname: zeppelin
     environment:
       http_proxy: http://utmidwsgw.gmaccm.com:8080
       ZEPPELIN_PORT: 8080
-      ZEPPELIN_JAVA_OPTS: >-
-        -Dspark.driver.memory=1g
-        -Dspark.executor.memory=2g
-      MASTER: local[*]
+      ZEPPELIN_LOG_DIR: /logs
+      ZEPPELIN_NOTEBOOK_DIR: '/notebook'
       SPARK_SUBMIT_OPTIONS: >-
         --packages org.postgresql:postgresql:42.2.5
     links:
       - message_store
       - message_store_data_api
     ports:
-      - 9002:8080
+      - 9001:8080
     volumes:
-      - ./zeppelin/data:/usr/zeppelin/data
-      - ./zeppelin/notebooks:/usr/zeppelin/notebook
-      - ./zeppelin/files:/usr/zeppelin/files
-      - ./zeppelin/conf:/usr/zeppelin/conf
+      - ./docker_data/zeppelin/conf:/zeppelin/conf
+      - ./docker_data/zeppelin/files:/files
+      - ./docker_data/zeppelin/logs:/logs
+      - ./docker_data/zeppelin/notebooks:/notebook
 
   message_store_data_gen:
     image: mrperson/message_store_data_gen

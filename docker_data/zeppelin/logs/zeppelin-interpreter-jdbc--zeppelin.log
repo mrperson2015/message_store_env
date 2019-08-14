@@ -1,0 +1,117 @@
+ INFO [2019-08-14 21:06:04,130] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:06:04,214] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.22.0.5:35035
+ INFO [2019-08-14 21:06:04,228] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 35035
+ INFO [2019-08-14 21:06:04,229] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 35035
+ INFO [2019-08-14 21:06:04,244] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.22.0.5, callbackPort: 42257, callbackInfo: CallbackInfo(host:172.22.0.5, port:35035)
+ INFO [2019-08-14 21:06:04,549] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ WARN [2019-08-14 21:06:04,661] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:06:04,695] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:06:04,695] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:06:04,695] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:06:04,701] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:06:04,702] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:06:04,722] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter823273914
+ERROR [2019-08-14 21:06:04,826] ({pool-2-thread-2} JDBCInterpreter.java[open]:199) - zeppelin will be ignored. driver.zeppelin and zeppelin.url is mandatory.
+ INFO [2019-08-14 21:06:05,032] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter823273914
+ INFO [2019-08-14 21:07:27,505] ({pool-1-thread-1} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...
+ INFO [2019-08-14 21:07:36,773] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:07:36,878] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.22.0.5:43299
+ INFO [2019-08-14 21:07:36,890] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 43299
+ INFO [2019-08-14 21:07:36,892] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 43299
+ INFO [2019-08-14 21:07:37,909] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.22.0.5, callbackPort: 44043, callbackInfo: CallbackInfo(host:172.22.0.5, port:43299)
+ INFO [2019-08-14 21:07:38,089] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ WARN [2019-08-14 21:07:38,196] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:07:38,229] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:07:38,229] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:07:38,230] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:07:38,234] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:07:38,235] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:07:38,248] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter823273914
+ERROR [2019-08-14 21:07:38,334] ({pool-2-thread-2} JDBCInterpreter.java[open]:199) - zeppelin will be ignored. driver.zeppelin and zeppelin.url is mandatory.
+ INFO [2019-08-14 21:07:38,509] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter823273914
+ INFO [2019-08-14 21:09:14,015] ({pool-1-thread-1} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...
+ INFO [2019-08-14 21:09:25,069] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:09:25,151] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.22.0.5:34023
+ INFO [2019-08-14 21:09:25,163] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 34023
+ INFO [2019-08-14 21:09:25,166] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 34023
+ INFO [2019-08-14 21:09:26,179] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.22.0.5, callbackPort: 35459, callbackInfo: CallbackInfo(host:172.22.0.5, port:34023)
+ INFO [2019-08-14 21:09:26,370] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ WARN [2019-08-14 21:09:26,460] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:09:26,491] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:09:26,492] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:09:26,493] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:09:26,498] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:09:26,499] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:09:26,512] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ERROR [2019-08-14 21:09:26,610] ({pool-2-thread-2} JDBCInterpreter.java[open]:199) - zeppelin will be ignored. driver.zeppelin and zeppelin.url is mandatory.
+ INFO [2019-08-14 21:09:26,806] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:19,743] ({pool-1-thread-1} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...
+ INFO [2019-08-14 21:11:27,935] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:11:27,997] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.22.0.5:46145
+ INFO [2019-08-14 21:11:28,005] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 46145
+ INFO [2019-08-14 21:11:28,007] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 46145
+ INFO [2019-08-14 21:11:29,024] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.22.0.5, callbackPort: 35813, callbackInfo: CallbackInfo(host:172.22.0.5, port:46145)
+ INFO [2019-08-14 21:11:29,178] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ WARN [2019-08-14 21:11:29,270] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:11:29,300] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:11:29,300] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:11:29,300] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:11:29,303] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:11:29,303] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:11:29,309] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ERROR [2019-08-14 21:11:29,377] ({pool-2-thread-2} JDBCInterpreter.java[open]:199) - zeppelin will be ignored. driver.zeppelin and zeppelin.url is mandatory.
+ INFO [2019-08-14 21:11:29,595] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:32,403] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:32,428] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:33,246] ({pool-2-thread-3} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:33,275] ({pool-2-thread-3} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:34,023] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:34,047] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:34,807] ({pool-2-thread-4} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:34,829] ({pool-2-thread-4} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:35,603] ({pool-2-thread-3} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:35,625] ({pool-2-thread-3} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:36,351] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:36,373] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:37,112] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190814-210548_1022376679 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:11:37,141] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190814-210548_1022376679 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:37:13,080] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:37:13,189] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.23.0.5:37763
+ INFO [2019-08-14 21:37:13,207] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 37763
+ INFO [2019-08-14 21:37:13,209] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 37763
+ INFO [2019-08-14 21:37:14,225] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.23.0.5, callbackPort: 35219, callbackInfo: CallbackInfo(host:172.23.0.5, port:37763)
+ INFO [2019-08-14 21:37:14,447] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ WARN [2019-08-14 21:37:14,605] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:37:14,670] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:37:14,673] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:37:14,674] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:37:14,680] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:37:14,681] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:37:14,698] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190304-194700_1454433029 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ERROR [2019-08-14 21:37:14,769] ({pool-2-thread-2} JDBCInterpreter.java[open]:199) - zeppelin will be ignored. driver.zeppelin and zeppelin.url is mandatory.
+ INFO [2019-08-14 21:37:15,767] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190304-194700_1454433029 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:37:33,949] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190304-195817_1779839608 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:37:33,969] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190304-195817_1779839608 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter596513246
+ INFO [2019-08-14 21:41:24,830] ({pool-1-thread-1} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...
+ INFO [2019-08-14 21:42:51,019] ({main} RemoteInterpreterServer.java[main]:261) - URL:jar:file:/zeppelin/lib/interpreter/zeppelin-interpreter-0.8.1.jar!/org/apache/zeppelin/interpreter/remote/RemoteInterpreterServer.class
+ INFO [2019-08-14 21:42:51,286] ({main} RemoteInterpreterServer.java[<init>]:162) - Launching ThriftServer at 172.26.0.4:40473
+ INFO [2019-08-14 21:42:51,320] ({main} RemoteInterpreterServer.java[<init>]:166) - Starting remote interpreter server on port 40473
+ INFO [2019-08-14 21:42:51,338] ({Thread-0} RemoteInterpreterServer.java[run]:203) - Starting remote interpreter server on port 40473
+ INFO [2019-08-14 21:42:52,379] ({Thread-1} RemoteInterpreterUtils.java[registerInterpreter]:165) - callbackHost: 172.26.0.4, callbackPort: 34067, callbackInfo: CallbackInfo(host:172.26.0.4, port:40473)
+ INFO [2019-08-14 21:42:52,855] ({pool-1-thread-1} RemoteInterpreterServer.java[createInterpreter]:311) - Instantiate interpreter org.apache.zeppelin.jdbc.JDBCInterpreter
+ WARN [2019-08-14 21:42:52,975] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:117) - Failed to load configuration, proceeding with a default
+ INFO [2019-08-14 21:42:53,020] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:129) - Server Host: 0.0.0.0
+ INFO [2019-08-14 21:42:53,020] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:131) - Server Port: 8080
+ INFO [2019-08-14 21:42:53,021] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:135) - Context Path: /
+ INFO [2019-08-14 21:42:53,026] ({pool-1-thread-1} ZeppelinConfiguration.java[create]:136) - Zeppelin Version: 0.8.1
+ INFO [2019-08-14 21:42:53,027] ({pool-1-thread-1} SchedulerFactory.java[<init>]:59) - Scheduler Thread Pool Size: 100
+ INFO [2019-08-14 21:42:53,038] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190304-194700_1454433029 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ERROR [2019-08-14 21:42:53,110] ({pool-2-thread-2} JDBCInterpreter.java[open]:199) - zeppelin will be ignored. driver.zeppelin and zeppelin.url is mandatory.
+ INFO [2019-08-14 21:42:53,359] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190304-194700_1454433029 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:43:17,392] ({pool-2-thread-2} SchedulerFactory.java[jobStarted]:114) - Job 20190304-195817_1779839608 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:43:17,408] ({pool-2-thread-2} SchedulerFactory.java[jobFinished]:120) - Job 20190304-195817_1779839608 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:43:59,294] ({pool-2-thread-3} SchedulerFactory.java[jobStarted]:114) - Job 20190304-194700_1454433029 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:43:59,468] ({pool-2-thread-3} SchedulerFactory.java[jobFinished]:120) - Job 20190304-194700_1454433029 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:44:02,550] ({pool-2-thread-5} SchedulerFactory.java[jobStarted]:114) - Job 20190304-195817_1779839608 started by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:44:02,578] ({pool-2-thread-5} SchedulerFactory.java[jobFinished]:120) - Job 20190304-195817_1779839608 finished by scheduler org.apache.zeppelin.jdbc.JDBCInterpreter2115454587
+ INFO [2019-08-14 21:44:44,472] ({pool-1-thread-1} RemoteInterpreterServer.java[shutdown]:209) - Shutting down...

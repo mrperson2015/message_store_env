@@ -3,7 +3,7 @@
     {
       "text": "%md\n# Spark Version",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -41,15 +41,15 @@
       "jobName": "paragraph_1552337836322_505345862",
       "id": "20190311-205716_1739898422",
       "dateCreated": "Mar 11, 2019 8:57:16 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:40 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "println(sc.version)",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -79,15 +79,15 @@
       "jobName": "paragraph_1551728576847_1292849185",
       "id": "20190304-194256_729120899",
       "dateCreated": "Mar 4, 2019 7:42:56 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:40 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n# PSQL Interpreter",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -104,28 +104,20 @@
         "params": {},
         "forms": {}
       },
-      "results": {
-        "code": "SUCCESS",
-        "msg": [
-          {
-            "type": "HTML",
-            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch1\u003ePSQL Interpreter\u003c/h1\u003e\n\u003c/div\u003e"
-          }
-        ]
-      },
       "apps": [],
       "jobName": "paragraph_1552337706458_1261176592",
       "id": "20190311-205506_779277578",
       "dateCreated": "Mar 11, 2019 8:55:06 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:40 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:04 PM",
       "status": "FINISHED",
+      "errorMessage": "",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%md\n# Spark Interpreter\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -155,15 +147,15 @@
       "jobName": "paragraph_1552337754012_1752393668",
       "id": "20190311-205554_852134813",
       "dateCreated": "Mar 11, 2019 8:55:54 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:40 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%psql\nselect * from public.messages limit 1000",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -245,15 +237,15 @@
       "jobName": "paragraph_1551728820589_1534992516",
       "id": "20190304-194700_1454433029",
       "dateCreated": "Mar 4, 2019 7:47:00 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:40 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "val jdbcDF \u003d spark.read\r\n  .format(\"jdbc\")\r\n  .option(\"url\", \"jdbc:postgresql://message_store/message_store\")\r\n  .option(\"dbtable\", \"public.messages\")\r\n  .option(\"user\", \"message_store\")\r\n  .option(\"password\", \"\")\r\n  .load()\r\n  .groupBy(\"stream_name\")\r\n  .count()\r\n  \r\n//   jdbcDF.show()\r\n  \r\n  z.show(jdbcDF)\r\n  \r\n  \r\n ",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:42:11 PM",
       "config": {
         "colWidth": 6.0,
         "enabled": true,
@@ -272,7 +264,7 @@
           "editOnDblClick": false
         },
         "editorMode": "ace/mode/scala",
-        "editorHide": true
+        "editorHide": false
       },
       "settings": {
         "params": {},
@@ -287,7 +279,7 @@
           },
           {
             "type": "TABLE",
-            "data": "stream_name\tcount\nLOGOUT\t6464\nLOGIN\t6531\nEXIT\t6470\nENTER\t6416\n"
+            "data": "stream_name\tcount\nLOGOUT\t17344\nLOGIN\t17510\nEXIT\t17679\nENTER\t17415\n"
           }
         ]
       },
@@ -295,15 +287,15 @@
       "jobName": "paragraph_1551728871966_-769391240",
       "id": "20190304-194751_1529639394",
       "dateCreated": "Mar 4, 2019 7:47:51 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:42 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:06 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%psql\n\nSELECT * FROM public.messages LIMIT 10",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -324,7 +316,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "id\tstream_name\ttype\tposition\tglobal_position\tdata\tmetadata\ttime\ncfb2f1d4-74c8-443d-b2aa-dd7b997e69b9\tLOGIN\t\u003cstring\u003e\t0\t1\t{\"test\": \"LOGIN-cfb2f1d4-74c8-443d-b2aa-dd7b997e69b9\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -54.2195, \"lon\": -50.9241}, \"timestamp\": 1565738243670}\t{\"userId\": \"1b93a7fc-90de-4eef-a5e7-90b12bca8c1b\", \"causationId\": \"964efd86-6634-4964-9a8e-23e4ed26ff87\", \"correlationId\": \"95987cad-aee5-479d-9563-698f9cfeab16\"}\t2019-08-13 23:17:23.685585\n74620ee2-f635-455e-9e6f-736394d0a680\tLOGIN\t\u003cstring\u003e\t1\t2\t{\"test\": \"LOGIN-74620ee2-f635-455e-9e6f-736394d0a680\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"WEB\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 47.9832, \"lon\": -64.4117}, \"timestamp\": 1565738243742}\t{\"userId\": \"76ff9e09-7863-4aca-82be-6eb1636b388d\", \"causationId\": \"0fc860cc-2c43-499f-801f-448a9248b985\", \"correlationId\": \"33c0dbb3-91bf-4302-aa4f-13b733aeee07\"}\t2019-08-13 23:17:23.74506\n1316853d-ff48-4b5e-ab12-94b34a16c5df\tENTER\t\u003cstring\u003e\t0\t3\t{\"test\": \"ENTER-1316853d-ff48-4b5e-ab12-94b34a16c5df\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"WEB\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 19.4709, \"lon\": 71.9472}, \"timestamp\": 1565738243769}\t{\"userId\": \"0526c8ae-3349-4043-902c-d3dc13c19f92\", \"causationId\": \"67652c7f-7e47-4bca-a097-140af68fcf01\", \"correlationId\": \"2c33ce6c-d978-4f34-b64d-f07587ba7bae\"}\t2019-08-13 23:17:23.771191\ne79be40b-0712-484b-9c0a-f9b5be8f1383\tLOGOUT\t\u003cstring\u003e\t0\t4\t{\"test\": \"LOGOUT-e79be40b-0712-484b-9c0a-f9b5be8f1383\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"BADGE\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 46.3435, \"lon\": 0.9476}, \"timestamp\": 1565738243787}\t{\"userId\": \"f83021b3-8e11-4a8e-95bd-f71bfd243633\", \"causationId\": \"02dc07fb-0a0f-4445-a856-5f29551db493\", \"correlationId\": \"5685bb62-6ad3-4a20-8292-dd5268908c66\"}\t2019-08-13 23:17:23.789765\n4ed1e926-6516-4011-b4c8-dff597d932dc\tENTER\t\u003cstring\u003e\t1\t5\t{\"test\": \"ENTER-4ed1e926-6516-4011-b4c8-dff597d932dc\", \"actor\": \"bob\", \"action\": \"ENTER\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -49.2713, \"lon\": -64.6376}, \"timestamp\": 1565738243802}\t{\"userId\": \"6c6270e0-45de-4a94-bfd1-2f060852e01a\", \"causationId\": \"2333d939-8dc7-4531-b4fb-22bb7d0f1d5b\", \"correlationId\": \"15040418-c608-4211-90ac-688c0ee1a1c4\"}\t2019-08-13 23:17:23.80438\n3b5198b9-de66-4c14-9464-b38b82a2572f\tLOGIN\t\u003cstring\u003e\t2\t6\t{\"test\": \"LOGIN-3b5198b9-de66-4c14-9464-b38b82a2572f\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -47.8288, \"lon\": 84.8258}, \"timestamp\": 1565738243816}\t{\"userId\": \"97143c83-cfe9-4e29-8792-54a6bfcfe841\", \"causationId\": \"e12e8bc2-0f36-4165-a3d5-e80a5892a486\", \"correlationId\": \"8ed2bf5d-296b-4f69-bd39-dab29632426c\"}\t2019-08-13 23:17:23.817687\n78b63efc-3f0a-4203-9a9a-b2f7bf963ea6\tENTER\t\u003cstring\u003e\t2\t7\t{\"test\": \"ENTER-78b63efc-3f0a-4203-9a9a-b2f7bf963ea6\", \"actor\": \"bob\", \"action\": \"ENTER\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 52.5057, \"lon\": -84.5167}, \"timestamp\": 1565738243830}\t{\"userId\": \"25a42845-4ccb-4611-bf2e-ddc5282764bf\", \"causationId\": \"9278d164-7feb-4e9e-ac25-66dba91c700e\", \"correlationId\": \"f11c9a64-9276-42b7-b0b3-6d8de9c5b3a2\"}\t2019-08-13 23:17:23.832177\n6551c0b9-2010-420b-b3aa-019cbae12e12\tLOGIN\t\u003cstring\u003e\t3\t8\t{\"test\": \"LOGIN-6551c0b9-2010-420b-b3aa-019cbae12e12\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"BADGE\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 24.7751, \"lon\": 34.4117}, \"timestamp\": 1565738243849}\t{\"userId\": \"b75d73fa-8b17-4218-b01c-2193c35719eb\", \"causationId\": \"b446b52e-984a-4825-9001-918fcb8aa59e\", \"correlationId\": \"76f723f5-1956-4e63-b00c-9bd4e2b0bd8f\"}\t2019-08-13 23:17:23.850388\ne7425847-5846-44a6-ac27-d7a9c52f644e\tLOGIN\t\u003cstring\u003e\t4\t9\t{\"test\": \"LOGIN-e7425847-5846-44a6-ac27-d7a9c52f644e\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"WEB\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 20.2296, \"lon\": -15.93}, \"timestamp\": 1565738243867}\t{\"userId\": \"7e3a24b4-124d-4058-ab1b-5809341d69d7\", \"causationId\": \"c08956b7-6d77-45b8-91af-dcd7e7494700\", \"correlationId\": \"82249911-07ed-4515-b280-1bf7dedccd3d\"}\t2019-08-13 23:17:23.868899\n43e5add1-94c5-477a-99cf-71c6a66a528f\tLOGOUT\t\u003cstring\u003e\t1\t10\t{\"test\": \"LOGOUT-43e5add1-94c5-477a-99cf-71c6a66a528f\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -47.6168, \"lon\": -92.6305}, \"timestamp\": 1565738243880}\t{\"userId\": \"772f05cc-c6bb-4df3-9cd4-a1d4060b82f5\", \"causationId\": \"2a0fb3fa-dce6-48a9-9051-f9b0c917b562\", \"correlationId\": \"af1a71d0-5000-4bc3-a79a-f1b2f3670037\"}\t2019-08-13 23:17:23.881891\n"
+            "data": "id\tstream_name\ttype\tposition\tglobal_position\tdata\tmetadata\ttime\n69ce7c42-7c5d-41d2-b94b-b62849c18409\tENTER\t\u003cstring\u003e\t216\t936\t{\"test\": \"ENTER-69ce7c42-7c5d-41d2-b94b-b62849c18409\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 70.0636, \"lon\": 113.063}, \"timestamp\": 1565738258063}\t{\"userId\": \"678fd8f9-6667-4378-bd89-39ed67695897\", \"causationId\": \"30e2226a-77d7-4e00-b4ba-d38963742251\", \"correlationId\": \"f6eea925-2727-44b2-b34d-758d3dccc61c\"}\t2019-08-13 23:17:38.064867\na68ccb2a-0e91-403b-b7cb-cfd633dd8215\tENTER\t\u003cstring\u003e\t217\t937\t{\"test\": \"ENTER-a68ccb2a-0e91-403b-b7cb-cfd633dd8215\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"WEB\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 55.6532, \"lon\": -10.5622}, \"timestamp\": 1565738258077}\t{\"userId\": \"43ec3cfd-c806-48e9-860b-db117dbe1000\", \"causationId\": \"76bbc79e-165d-47e7-9ffd-fcbbbf4ffeb8\", \"correlationId\": \"1a7dfc24-5630-4852-b6db-51e7fbcdba46\"}\t2019-08-13 23:17:38.078791\naf6427fc-815d-4cc5-b19d-713b90b59d4e\tLOGOUT\t\u003cstring\u003e\t238\t938\t{\"test\": \"LOGOUT-af6427fc-815d-4cc5-b19d-713b90b59d4e\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"WEB\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 36.3057, \"lon\": 53.9442}, \"timestamp\": 1565738258093}\t{\"userId\": \"02718c00-9b9f-4c70-8f59-e9f9e2427f3c\", \"causationId\": \"46856bc2-da84-46d9-b38f-16f0ee3d010a\", \"correlationId\": \"6c5f332e-7169-4f50-928a-defa7499219c\"}\t2019-08-13 23:17:38.094999\n0dc9e8d3-2cdf-42e9-9ba0-696a247df0c0\tLOGIN\t\u003cstring\u003e\t226\t939\t{\"test\": \"LOGIN-0dc9e8d3-2cdf-42e9-9ba0-696a247df0c0\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"BADGE\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 26.3332, \"lon\": -154.7449}, \"timestamp\": 1565738258110}\t{\"userId\": \"c55486db-ad13-4e4b-9917-0cac96ad5411\", \"causationId\": \"b47e0988-9049-4ce1-80d8-c24a32833621\", \"correlationId\": \"b2f7270c-58e2-4863-b4d2-60b2dcce045f\"}\t2019-08-13 23:17:38.111039\n6b1089b9-db7b-4bb5-9957-5339aff164c7\tLOGOUT\t\u003cstring\u003e\t239\t940\t{\"test\": \"LOGOUT-6b1089b9-db7b-4bb5-9957-5339aff164c7\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"BADGE\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -16.4301, \"lon\": 171.4153}, \"timestamp\": 1565738258122}\t{\"userId\": \"17dc32c5-167c-47d0-9c13-7f83c5963692\", \"causationId\": \"3dcf434e-c43f-4af6-98e6-65fcd0077016\", \"correlationId\": \"4e6f5cb6-458a-4bee-b70d-1934452f8cfd\"}\t2019-08-13 23:17:38.123369\ned0fa0e7-8ea6-4c75-ad13-256ae2680af5\tEXIT\t\u003cstring\u003e\t255\t941\t{\"test\": \"EXIT-ed0fa0e7-8ea6-4c75-ad13-256ae2680af5\", \"actor\": \"bob\", \"action\": \"ENTER\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -43.4386, \"lon\": 51.4931}, \"timestamp\": 1565738258135}\t{\"userId\": \"5564c95f-aa33-48dd-a36c-833cf9612bd2\", \"causationId\": \"d52e8e18-f800-485a-98a0-5d4fa0000bdd\", \"correlationId\": \"f91f7a87-ffca-432b-b513-7cc4b6d10dfe\"}\t2019-08-13 23:17:38.136784\nb3145ba4-8759-4390-8ec4-4a97dda4d597\tENTER\t\u003cstring\u003e\t218\t942\t{\"test\": \"ENTER-b3145ba4-8759-4390-8ec4-4a97dda4d597\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 61.3102, \"lon\": -14.3664}, \"timestamp\": 1565738258150}\t{\"userId\": \"6c2bf8ed-6423-4e25-9889-63fee2a8d502\", \"causationId\": \"c59f3d48-9583-42aa-b06f-4c8a4533699c\", \"correlationId\": \"5e4add88-f810-4704-a0d3-b1b0a1f274a2\"}\t2019-08-13 23:17:38.151631\n4a5745e0-ec5c-460f-92f9-6413fd97ad38\tENTER\t\u003cstring\u003e\t219\t943\t{\"test\": \"ENTER-4a5745e0-ec5c-460f-92f9-6413fd97ad38\", \"actor\": \"bob\", \"action\": \"LOGIN\", \"system\": \"WEB\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 25.4784, \"lon\": 27.2973}, \"timestamp\": 1565738258162}\t{\"userId\": \"93cfc0d2-6005-4a38-91cc-a339b98d1b10\", \"causationId\": \"2e193ec2-2863-4181-9f2c-9e6609da7d38\", \"correlationId\": \"c481b3ef-4b3b-471c-8138-063fb53294fe\"}\t2019-08-13 23:17:38.163523\n22aaeca9-9b72-48ef-9d12-bae830c95951\tEXIT\t\u003cstring\u003e\t256\t944\t{\"test\": \"EXIT-22aaeca9-9b72-48ef-9d12-bae830c95951\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"BADGE\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": 7.0734, \"lon\": -156.4281}, \"timestamp\": 1565738258175}\t{\"userId\": \"4fdd27a0-b68c-47ff-b65a-8ec7a742766b\", \"causationId\": \"cea971dd-72d1-4a97-8103-c1f6eb0ee635\", \"correlationId\": \"6dc47b17-ba93-418b-adcb-01d8ac4af94b\"}\t2019-08-13 23:17:38.176382\n735a548c-2bf3-4dd5-8c39-73ee2d0d3b4b\tLOGIN\t\u003cstring\u003e\t227\t945\t{\"test\": \"LOGIN-735a548c-2bf3-4dd5-8c39-73ee2d0d3b4b\", \"actor\": \"bob\", \"action\": \"LOGOUT\", \"system\": \"AUDIT\", \"message\": \"Entered Building 1\", \"objects\": [\"Building 1\"], \"location\": {\"lat\": -9.1712, \"lon\": 60.7638}, \"timestamp\": 1565738258192}\t{\"userId\": \"a8dc7fbf-674d-4204-8ead-752c89226730\", \"causationId\": \"18223d8e-12fc-4340-9f48-778cf0d6edc4\", \"correlationId\": \"2f4c1854-e60b-48cc-8127-48f33d9a0a85\"}\t2019-08-13 23:17:38.193595\n"
           }
         ]
       },
@@ -332,15 +324,15 @@
       "jobName": "paragraph_1551729497564_-577926971",
       "id": "20190304-195817_1779839608",
       "dateCreated": "Mar 4, 2019 7:58:17 PM",
-      "dateStarted": "Aug 13, 2019 11:23:40 PM",
-      "dateFinished": "Aug 13, 2019 11:23:40 PM",
+      "dateStarted": "Aug 13, 2019 11:34:04 PM",
+      "dateFinished": "Aug 13, 2019 11:34:04 PM",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%psql\n",
       "user": "anonymous",
-      "dateUpdated": "Aug 13, 2019 11:23:40 PM",
+      "dateUpdated": "Aug 13, 2019 11:28:12 PM",
       "config": {
         "colWidth": 12.0,
         "enabled": true,
@@ -364,7 +356,7 @@
       "progressUpdateIntervalMs": 500
     }
   ],
-  "name": "Message Store Sample",
+  "name": "PolarisCon_2019/Zeppelin Spark Intro",
   "id": "2E7GJ95VB",
   "angularObjects": {
     "2E5WBV5HF:shared_process": [],
