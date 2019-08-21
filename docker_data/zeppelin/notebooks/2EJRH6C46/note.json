@@ -131,7 +131,7 @@
     {
       "text": "%md\n# Spark Interpreter\n",
       "user": "anonymous",
-      "dateUpdated": "2019-08-14 21:43:59.056",
+      "dateUpdated": "2019-08-21 16:15:08.540",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -162,15 +162,15 @@
       "jobName": "paragraph_1565817663783_-1985004435",
       "id": "20190311-205554_852134813",
       "dateCreated": "2019-08-14 21:21:03.783",
-      "dateStarted": "2019-08-14 21:43:59.135",
-      "dateFinished": "2019-08-14 21:43:59.147",
+      "dateStarted": "2019-08-21 16:15:08.571",
+      "dateFinished": "2019-08-21 16:15:10.815",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
     {
       "text": "%jdbc\nselect * from public.messages limit 1000",
       "user": "anonymous",
-      "dateUpdated": "2019-08-14 21:44:02.778",
+      "dateUpdated": "2019-08-21 16:14:34.422",
       "config": {
         "tableHide": false,
         "editorSetting": {
@@ -266,7 +266,7 @@
     {
       "text": "val jdbcDF \u003d spark.read\r\n  .format(\"jdbc\")\r\n  .option(\"url\", \"jdbc:postgresql://message_store/message_store\")\r\n  .option(\"dbtable\", \"public.messages\")\r\n  .option(\"user\", \"message_store\")\r\n  .option(\"password\", \"\")\r\n  .load()\r\n  .groupBy(\"stream_name\")\r\n  .count()\r\n  \r\n//   jdbcDF.show()\r\n  \r\n  z.show(jdbcDF)\r\n  \r\n  \r\n ",
       "user": "anonymous",
-      "dateUpdated": "2019-08-14 21:43:59.487",
+      "dateUpdated": "2019-08-21 16:17:05.699",
       "config": {
         "editorSetting": {
           "language": "scala",
@@ -276,11 +276,11 @@
         },
         "colWidth": 6.0,
         "editorMode": "ace/mode/scala",
-        "editorHide": true,
+        "editorHide": false,
         "results": {
           "0": {
             "graph": {
-              "mode": "table",
+              "mode": "stackedAreaChart",
               "height": 300.0,
               "optionOpen": false,
               "setting": {
@@ -301,10 +301,38 @@
                   },
                   "updated": false,
                   "initialized": false
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
                 }
               },
-              "commonSetting": {}
-            }
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "stream_name",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "count",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
           },
           "1": {
             "graph": {
@@ -348,7 +376,7 @@
         "msg": [
           {
             "type": "TABLE",
-            "data": "stream_name\tcount\nLOGOUT\t171\nLOGIN\t176\nEXIT\t160\nENTER\t161\n"
+            "data": "stream_name\tcount\nLOGOUT\t3863\nLOGIN\t3856\nEXIT\t3840\nENTER\t3777\n"
           },
           {
             "type": "TEXT",
@@ -363,11 +391,11 @@
           "tooltip": "View in Spark web UI",
           "group": "spark",
           "values": [
-            "http://172.26.0.4:4040/jobs/job?id\u003d5",
-            "http://172.26.0.4:4040/jobs/job?id\u003d6",
-            "http://172.26.0.4:4040/jobs/job?id\u003d7",
-            "http://172.26.0.4:4040/jobs/job?id\u003d8",
-            "http://172.26.0.4:4040/jobs/job?id\u003d9"
+            "http://172.19.0.5:4040/jobs/job?id\u003d0",
+            "http://172.19.0.5:4040/jobs/job?id\u003d1",
+            "http://172.19.0.5:4040/jobs/job?id\u003d2",
+            "http://172.19.0.5:4040/jobs/job?id\u003d3",
+            "http://172.19.0.5:4040/jobs/job?id\u003d4"
           ],
           "interpreterSettingId": "spark"
         }
@@ -376,8 +404,8 @@
       "jobName": "paragraph_1565817663791_1487547905",
       "id": "20190304-194751_1529639394",
       "dateCreated": "2019-08-14 21:21:03.792",
-      "dateStarted": "2019-08-14 21:43:59.613",
-      "dateFinished": "2019-08-14 21:44:02.396",
+      "dateStarted": "2019-08-21 16:15:12.982",
+      "dateFinished": "2019-08-21 16:15:34.958",
       "status": "FINISHED",
       "progressUpdateIntervalMs": 500
     },
