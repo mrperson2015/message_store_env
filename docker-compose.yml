@@ -5,6 +5,7 @@ services:
     hostname: message_store
     environment:
       http_proxy: http://utmidwsgw.gmaccm.com:8080
+      https_proxy: http://utmidwsgw.gmaccm.com:8080
     expose:
       - 5432
     ports:
@@ -15,6 +16,7 @@ services:
     hostname: message_store_data_api
     environment:
       http_proxy: http://utmidwsgw.gmaccm.com:8080
+      https_proxy: http://utmidwsgw.gmaccm.com:8080
       MESSAGE_STORE_USER: 'message_store'
       MESSAGE_STORE_HOST: 'message_store'
       MESSAGE_STORE_DATABASE: 'message_store'
@@ -32,6 +34,7 @@ services:
     hostname: zeppelin
     environment:
       http_proxy: http://utmidwsgw.gmaccm.com:8080
+      https_proxy: http://utmidwsgw.gmaccm.com:8080
       ZEPPELIN_PORT: 8080
       ZEPPELIN_LOG_DIR: /logs
       ZEPPELIN_NOTEBOOK_DIR: '/notebook'
@@ -42,6 +45,9 @@ services:
       - message_store_data_api
     ports:
       - 9001:8080
+      - 4040:4040
+      - 6066:6066
+      - 7077:7077
     volumes:
       - ./docker_data/zeppelin/conf:/zeppelin/conf
       - ./docker_data/zeppelin/files:/files
@@ -53,6 +59,7 @@ services:
     hostname: message_store_data_gen
     environment:
       http_proxy: http://utmidwsgw.gmaccm.com:8080
+      https_proxy: http://utmidwsgw.gmaccm.com:8080
     links:
       - message_store
       - message_store_data_api

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-CONTAINER_NAME="portainer"
-IMAGE="portainer/portainer"
+CONTAINER_NAME="msg_store"
+IMAGE="ethangarofolo/eventide-message-store-postgres"
 
 docker pull $IMAGE:latest
 
@@ -16,22 +16,19 @@ done
 
 docker run \
     -d \
-    -p 9000:9000 \
+    -p 5432:5432 \
     --name=$CONTAINER_NAME \
     --restart always \
     -e http_proxy=http://utmidwsgw.gmaccm.com:8080 \
     -e https_proxy=http://utmidwsgw.gmaccm.com:8080 \
-    -v /var/run/docker.sock:/var/run/docker.sock \
     --network=messagestore_default \
-    $IMAGE:latest \
-    --admin-password='$2y$12$wxhWs2RTCf6wQ59kzfmqUOoFPogTwAkB1AOK05ghWEjJ0GHPfQG0C' \
-    -H unix:///var/run/docker.sock
+    $IMAGE:latest
 
 
 echo "------------------------------"
 echo "| Key      | Value           |"
 echo "------------------------------"
-echo "| Address  | localhost:9000  |"
-echo "| Username | admin           |"
-echo "| Password | password1       |"
+echo "| Address  | localhost:5432  |"
+echo "| Username | message_store   |"
+echo "| Password |                 |"
 echo "------------------------------"
